@@ -1,0 +1,5 @@
+# Experimental, unofficial provider for @deepseek-ai/dsh@0.1.0-rc.7 and
+# @deepseek-ai/cordis@4.0.1. Tokens live in $DSH_HOME/grok-oauth.json.
+- insert:
+    - id: llm-grok
+      name: dsh-llm-grok

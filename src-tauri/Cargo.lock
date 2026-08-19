@@ -515,6 +515,7 @@ dependencies = [
  "libc",
  "tauri",
  "tauri-build",
+ "url",
 ]
 
 [[package]]

@@ -1,0 +1,84 @@
+{
+  "name": "dsh-llm-grok",
+  "version": "0.1.0",
+  "description": "Experimental unofficial Grok OAuth provider plugin for @deepseek-ai/dsh@0.1.0-rc.7",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "typecheck": "pnpm exec tsc -p jsconfig.json --noEmit",
+    "check": "pnpm run typecheck && node --check src/*.js && pnpm run test",
+    "quality": "pnpm run check"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "grok",
+    "xai",
+    "oauth"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.1",
+    "@deepseek-ai/dsh-llm": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-settings": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-timeout": "0.1.0-rc.7",
+    "@deepseek-ai/schemastery": "3.18.1",
+    "react": "18.3.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-llm": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-settings": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-timeout": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "typescript": "5.6.3"
+  }
+}

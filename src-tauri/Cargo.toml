@@ -2,8 +2,9 @@
 name = "deepseek-rs"
 version = "0.1.0"
 description = "macOS window for the DeepSeek Harness web profile"
-authors = ["you"]
+authors = ["taoyi <yitao@moonton.com>"]
 edition = "2021"
+rust-version = "1.88"
 license = "MIT"
 publish = false
 
@@ -16,6 +17,7 @@ tauri-build = { version = "2", features = [] }
 
 [dependencies]
 tauri = { version = "2", features = [] }
+url = "2"
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2"

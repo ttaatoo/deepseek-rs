@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "maxNodeModuleJsDepth": 0,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "lib": ["ES2022", "ESNext.Disposable", "DOM"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*.js"]
+}
