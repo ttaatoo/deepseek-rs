@@ -1,0 +1,8 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Splash window may listen for Host ready/error events. The Harness GUI origin gets no Tauri commands.",
+  "windows": ["main"],
+  "platforms": ["macOS"],
+  "permissions": ["core:default"]
+}
