@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private vulnerability reporting (required before release)
+    url: https://github.com/ttaatoo/deepseek-rs/security/advisories/new
+    about: Maintainers must enable and verify this form before a public release. Do not post sensitive details in a public issue. If the form is unavailable, use https://github.com/ttaatoo to request a private channel.

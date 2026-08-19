@@ -1,0 +1,23 @@
+# Keep this allow-list explicit. A new or unrecognised Cargo license must stop
+# the release until its terms are reviewed and added deliberately.
+accepted = [
+    "0BSD",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "CC0-1.0",
+    "ISC",
+    "MIT",
+    "MIT-0",
+    "MPL-2.0",
+    "NCSA",
+    "Unicode-3.0",
+    "Unlicense",
+    "Zlib",
+]
+
+# The application crate is private, but its MIT license is still included in
+# the generated inventory. Do not silently omit it from the report.
+[private]
+ignore = false
