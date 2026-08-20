@@ -792,7 +792,7 @@ async function installDsh(dsh, nodeBinDir) {
 
   const path = `${nodeBinDir}${delimiter}${process.env.PATH ?? ""}`;
   console.log(`pnpm install --prod (Node ${NODE_VERSION}, @deepseek-ai/dsh@${dsh})`);
-  runPnpm(["install", "--prod", "--frozen-lockfile"], {
+  runPnpm(["install", "--prod", "--frozen-lockfile", "--ignore-workspace"], {
     cwd: STAGE,
     stdio: "inherit",
     env: { ...process.env, PATH: path },
